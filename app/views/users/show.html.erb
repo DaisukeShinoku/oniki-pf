@@ -1,0 +1,14 @@
+<% provide(:title, 'Mypage') %>
+
+<div class="container">
+
+<%= render 'shared/flash' %>
+
+  <div class="row">
+    <div class="col-12">
+      <div><%= @user.account_id %></div>
+      <div><%= @user.email %></div>
+      <div><%= @user.name %></div>
+    </div>
+  </div>
+</div>
