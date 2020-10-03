@@ -4,11 +4,31 @@
 
 <%= render 'shared/flash' %>
 
+
+  <div class="row">
+    <div class="col text-left"><h1>マイページ</h1></div>
+    <div class="text-right">
+      <%= link_to "登録情報を編集する", edit_user_path(@user), class: "btn btn-primary" %>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-12">
-      <div><%= @user.account_id %></div>
-      <div><%= @user.email %></div>
-      <div><%= @user.name %></div>
+      <table>
+        <tr>
+          <td>会員ID</td>
+          <td><%= @user.account_id %></td>
+        </tr>
+        <tr>
+          <td>メールアドレス</td>
+          <td><%= @user.email %></td>
+        </tr>
+        <tr>
+          <td>氏名</td>
+          <td><%= @user.name %></td>
+        </tr>
+      </table>
+
     </div>
   </div>
 </div>
